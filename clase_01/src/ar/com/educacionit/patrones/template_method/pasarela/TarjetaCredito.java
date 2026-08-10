@@ -1,22 +1,23 @@
 package ar.com.educacionit.patrones.template_method.pasarela;
 
-public class TarjetaCredito extends Pago  {
+public class TarjetaCredito extends Pago {
 
 	@Override
 	protected void validarCliente() {
-		// TODO Auto-generated method stub
+		System.out.println("Pedir el DNI");
+		System.out.println("Comprobar si el nombre y apellido coincide con el nombre del plástico");
 		
 	}
 
 	@Override
 	protected void realizarPago(double monto) {
-		// TODO Auto-generated method stub
+		System.out.println("Se genera el debito de la cuenta del cliente");
 		
 	}
 
 	@Override
 	protected void crearFactura(double monto) {
-		// TODO Auto-generated method stub
+		System.out.println("Creando la factura por un monto de " + monto);
 		
 	}
 

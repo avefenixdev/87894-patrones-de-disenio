@@ -16,7 +16,8 @@ public abstract class Pago {
 		// 2.Realizarel pago
 		realizarPago(monto);
 		// 3. Verificar el pago
-		confirmarTraccion();
+		confirmarTransaccion();
+		// 4. Crear Factura
 		crearFactura(monto);
 	}
 
@@ -24,7 +25,7 @@ public abstract class Pago {
 	protected abstract void realizarPago(double monto);
 	protected abstract void crearFactura(double monto);
 	
-	private void confirmarTraccion() {
+	private void confirmarTransaccion() {
 		System.out.println("Transacción confirmada!");
 	}
 

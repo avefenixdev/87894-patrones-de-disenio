@@ -1,6 +1,6 @@
 package ar.com.educacionit.patrones.template_method;
 
-import ar.com.educacionit.patrones.template_method.pasarela.Pago;
+import ar.com.educacionit.patrones.template_method.pasarela.*;
 
 public class Main {
 
@@ -17,7 +17,16 @@ public class Main {
 		// Login
 		// Pasarela de pagos
 		
-		// Pago p = new Pago();
+		// Pago p = new Pago(); // ! No se puede instanciar
+		System.out.println("Template Method");
+		
+		Pago efectivo = new Efectivo();
+		efectivo.procesarPago(2243.20);
+		
+		System.out.println("---------------------------");
+		
+		Pago tarjetaCredito = new TarjetaCredito();
+		tarjetaCredito.procesarPago(5257.20);
 
 	}
 
