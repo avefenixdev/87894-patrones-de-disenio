@@ -1,5 +1,8 @@
 package ar.com.educacionit.factory_method.granja;
 
+import ar.com.educacionit.factory_method.granja.entidades.GranjaFactory;
+import ar.com.educacionit.factory_method.granja.interfaces.Animal;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -30,6 +33,15 @@ public class Test {
 		// - Tenés varios objetos similares
 		// - El tipo se decide en tiempo de ejecución
 		// - Sabes que el sistema va a crecer
+		
+		GranjaFactory factory = new GranjaFactory();
+		
+		Animal gato = factory.crearAnimal("GATO");
+		gato.emitirSonido();
+		
+		Animal perro = factory.crearAnimal("PERRO");
+		perro.emitirSonido();
+		
 
 	}
 
