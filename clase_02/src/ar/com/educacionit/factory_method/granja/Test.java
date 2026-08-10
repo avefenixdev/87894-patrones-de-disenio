@@ -1,6 +1,7 @@
 package ar.com.educacionit.factory_method.granja;
 
 import ar.com.educacionit.factory_method.granja.entidades.GranjaFactory;
+import ar.com.educacionit.factory_method.granja.enumerados.TipoAnimal;
 import ar.com.educacionit.factory_method.granja.interfaces.Animal;
 
 public class Test {
@@ -36,11 +37,17 @@ public class Test {
 		
 		GranjaFactory factory = new GranjaFactory();
 		
-		Animal gato = factory.crearAnimal("GATO");
+		Animal gato = factory.crearAnimal(TipoAnimal.GATO);
 		gato.emitirSonido();
 		
-		Animal perro = factory.crearAnimal("PERRO");
+		Animal perro = factory.crearAnimal(TipoAnimal.PERRO);
 		perro.emitirSonido();
+		
+		Animal vaca = factory.crearAnimal(TipoAnimal.VACA);
+		vaca.emitirSonido();
+		
+		Animal oveja = factory.crearAnimal(TipoAnimal.OVEJA);
+		oveja.emitirSonido();
 		
 
 	}
