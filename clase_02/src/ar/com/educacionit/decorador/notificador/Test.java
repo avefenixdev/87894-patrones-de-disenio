@@ -30,6 +30,18 @@ public class Test {
 		
 		n.enviar("Bienvenido a nuestra comunidad");
 		
+		System.out.println("-------------------------------------");
+		
+		Notificador redes = new NotificadorWhatsApp(new NotificadorTikTok(new NotificadorEmail()));
+		
+		
+		redes.enviar("Novedades del grupo de lectura"); // Email + TikTok + WhatsApp
+		
+		System.out.println("-------------------------------------");
+		
+		Notificador redes2 = new NotificadorTikTok(new NotificadorWhatsApp(new NotificadorEmail()));
+		
+		redes2.enviar("Novedades del foro de Hacking"); // Email + WhatsApp + TikTok  
 	}
 
 }
