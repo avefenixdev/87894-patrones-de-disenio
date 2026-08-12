@@ -1,0 +1,35 @@
+@startuml
+
+    class Usuario {
+        - nombre : String
+        - apellido : String
+        - edad : int
+        - email : String
+        - telefono : String
+
+        - Usuario(builder : Builder)
+
+        + toString() : String
+    }
+
+    class "Usuario.Builder" as Builder {
+        - nombre : String
+        - apellido : String
+        - edad : int
+        - email : String
+        - telefono : String
+
+        + Builder(nombre : String, apellido : String)
+        + edad(edad : int) : Builder
+        + email(email : String) : Builder
+        + telefono(telefono : String) : Builder
+        + build() : Usuario
+    }
+
+    Usuario *-- Builder : contiene
+
+    Builder ..> Usuario : crea
+
+}
+
+@enduml
