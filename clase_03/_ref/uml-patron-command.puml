@@ -1,0 +1,55 @@
+@startuml
+
+title Command Pattern - Editor de Texto
+
+interface Command <<Command>> {
+    + ejecutar() : void
+    + volverAtras() : void
+}
+
+class EscribirComando <<ConcreteCommand>> {
+    - editor : EditorTexto
+    - palabra : String
+
+    + ejecutar() : void
+    + volverAtras() : void
+}
+
+class EditorTexto <<Receiver>> {
+    - texto : StringBuilder
+
+    + escribir(palabra : String) : void
+    + borrar(distancia : int) : void
+    + getTexto() : String
+}
+
+class CommandManager <<Invoker>> {
+    - history : Stack<Command>
+
+    + ejecutarComando(comando : Command) : void
+    + deshacerUltimo() : void
+}
+
+Command <|.. EscribirComando
+
+EscribirComando --> EditorTexto : delega operación
+
+CommandManager --> Command : ejecuta
+CommandManager o-- "0..*" Command : historial
+
+note right of Command
+    Encapsula una operación
+    que puede ejecutarse
+    y deshacerse
+end note
+
+note right of EditorTexto
+    Realiza el trabajo real
+end note
+
+note right of CommandManager
+    Invoca comandos
+    y mantiene el historial
+end note
+
+@enduml
