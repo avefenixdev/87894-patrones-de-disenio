@@ -1,0 +1,4 @@
+Java es un lenguaje orientado a objetos
+Facade es un patrón estructural
+Java utiliza la API NIO para trabajar con archivos
+Estamos aprendiendo patrones de diseño

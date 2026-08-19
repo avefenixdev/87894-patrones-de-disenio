@@ -60,4 +60,4 @@ public class NioFacade {
 		System.out.println("Archivo eliminado: " + rutaArchivo.toAbsolutePath());
 	}
 
-}
+}	
