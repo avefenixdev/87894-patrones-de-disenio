@@ -13,6 +13,7 @@ public class Test {
 		// Tarjeta de crédito (Estrategias Tarjeta crédito)
 		// Efectivo (Estrategias Efectivo)
 		// Transferencia (Estrategias Transferencia)
+		
 
 	}
 
