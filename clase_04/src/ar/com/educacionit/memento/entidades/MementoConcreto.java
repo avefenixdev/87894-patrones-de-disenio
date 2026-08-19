@@ -1,0 +1,32 @@
+package ar.com.educacionit.memento.entidades;
+
+import ar.com.educacionit.memento.interfaces.Memento;
+
+public class MementoConcreto implements Memento {
+	
+	private final String nivel;
+	private final int vida;
+	
+	public MementoConcreto(String nivel, int vida) {
+		this.nivel = nivel;
+		this.vida = vida;
+	}
+
+	@Override
+	public String getNivel() {
+		return this.nivel;
+	}
+
+	@Override
+	public int getVida() {
+		return this.vida;
+	}
+
+	@Override
+	public String toString() {
+		return "MementoConcreto [nivel=" + nivel + ", vida=" + vida + "]";
+	}
+	
+	
+
+}
